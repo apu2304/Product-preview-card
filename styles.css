@@ -1,0 +1,144 @@
+:root {
+    --linen: #F3EAE3ff;
+    --cool-gray: #8d8d8d;
+    --brunswick-green: #1A4031ff;
+    --viridian: #3D886Dff;
+    --eerie-black: #1E2329ff;
+    --white: #FFFFFFff;
+}
+@font-face {
+    font-family: 'body';
+    src: url('fonts/Montserrat-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'header';
+    src: url('fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf');
+}
+body {
+    display: grid;
+    place-content: center;
+    grid-template-rows: auto;
+    height: 100vh;
+    background-color: var(--linen);
+    font-family: 'body';
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 20px;
+    max-width: 22em;
+}
+.mob{
+    max-inline-size: 100%;
+    border-radius: 20px 20px 0 0;
+}
+.desk{
+    display: none;
+}
+   
+.text{
+    padding: 0 20px 20px 20px;
+}
+.text h1{
+    font-family: 'header';
+    color: var(--eerie-black);
+}
+.text .per{
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+}
+.text p{
+    color: var(--cool-gray);
+}
+.text .sale{
+    font-family: 'header';
+    color: var(--viridian);
+    font-size: 2em;
+    font-weight: 700;
+    padding: 5px;
+}
+.text .pre{
+    text-decoration: line-through;
+    margin-left: 10px;
+    margin-bottom: -5px;
+    font-size: 0.9em;
+    color: var(--cool-gray);
+}
+.text .Add{
+    padding-left: 0.6em;
+}
+.text button{
+    display: block;
+    width: 15em;
+    background-color: var(--viridian);
+    color: var(--white);
+    font-size: 1.28em;
+    outline: none;
+    border: none;
+    padding: 10px;
+    margin-top: 0 auto;
+    margin-top: 10px;
+    border-radius: 5px;
+   
+}
+@media screen and (min-width:82em) {
+    body {
+        display: grid;
+        place-content: center;
+        grid-template-rows: auto;
+        height: 100vh;
+        background-color: var(--linen);
+        font-family: 'body';
+    }
+    .card {
+        max-width: 38em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 30em;
+    }
+    .text h1{
+       padding: 0.1em 0;
+    }
+    .card .text{
+        padding: 20px;
+    }
+    .desk{
+        display: block;
+       height: 30em;
+       border-radius: 20px 0 0 20px;
+
+    }
+    .mob{
+        display: none;
+    }
+    .text button{
+        display: block;
+        width: 12em;
+        background-color: var(--viridian);
+        color: var(--white);
+        font-size: 1.28em;
+        transition: all 0.3s ease-out;
+    }
+    .text button:hover{
+        background-color: var(--brunswick-green);
+    }
+    .text .para{
+        line-height: 1.3em;
+    }
+    .text .sale{
+        display: inline-block;
+        padding-bottom: 0.6em;
+    }
+    .text .Add{
+        padding-left: 0.6em;
+    }
+}
+.attribution {
+    margin-top: 10px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
